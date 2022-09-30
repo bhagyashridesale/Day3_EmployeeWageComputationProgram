@@ -5,7 +5,8 @@ public class EmployeeWageComputation {
     static final int FULL_DAY_HOUR = 12;
 
     static final int PART_TIME_HOUR = 6;
-    static final int IS_FULL_HOUR = 2;
+    
+
 
 
     public static void main(String[] args) {
