@@ -5,9 +5,11 @@ public class EmployeeWageComputation {
     static final int FULL_DAY_HOUR = 12;
 
     static final int PART_TIME_HOUR = 6;
+    static final int IS_FULL_HOUR = 2;
+
 
     public static void main(String[] args) {
-        int employeeAttendance=(int)Math.round(Math.random());
+        int employeeAttendance=(int)Math.floor(Math.random()*10)%3;
             System.out.println("Employee Attendance");
         int dailyWage = 0;
             if (employeeAttendance==2) {
