@@ -5,22 +5,26 @@ public class EmployeeWageComputation {
     static final int FULL_DAY_HOUR = 12;
 
     static final int PART_TIME_HOUR = 6;
-    
+    static final int IS_FULL_TIME = 2;
+    static final int IS_PART_TIME = 1;
 
 
 
     public static void main(String[] args) {
         int employeeAttendance=(int)Math.floor(Math.random()*10)%3;
-            System.out.println("Employee Attendance");
         int dailyWage = 0;
-            if (employeeAttendance==2) {
-                System.out.println("Employee is Full Time");
-                dailyWage= WAGE_PER_HOUR*FULL_DAY_HOUR;
-            }
-            else if (employeeAttendance==1){
-                System.out.print("Employee is Part Time");
-            }
-            else {
+        switch (employeeAttendance)
+        {
+            case IS_FULL_TIME :
+            System.out.println("Employee is Full Time");
+            dailyWage= WAGE_PER_HOUR*FULL_DAY_HOUR;
+              break;
+            case IS_PART_TIME :
+                System.out.println("Employee is Part Time");
+                dailyWage= WAGE_PER_HOUR*PART_TIME_HOUR;
+                break;
+            default:
+
                 System.out.println("Employee is absent");
             }
             System.out.println(" Daily Wage =>" +dailyWage);
